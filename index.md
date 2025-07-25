@@ -5,7 +5,7 @@
 ### Category Name 1 
 
 [Predicting Crash Severity](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/crashes.png?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
