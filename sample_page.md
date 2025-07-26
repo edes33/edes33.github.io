@@ -6,7 +6,7 @@
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/crashes1.png?raw=true"/>
 
 ### 2. Data Understanding
 
