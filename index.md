@@ -4,7 +4,7 @@
 
 ### Category Name 1 
 
-[Predicting Crash Severity](/sample_page)
+[Predicting Car Crash Severity](/sample_page)
 <img src="images/crashes.png?raw=true"/>
 
 ---
