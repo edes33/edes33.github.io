@@ -6,17 +6,16 @@
 
 Motor vehicle crashes can result in outcomes ranging from minor property damage to severe injuries or fatalities. Predicting the severity of a crash based on environmental and situational factors can help inform public safety initiatives, emergency response planning, and infrastructure improvements. This project aims to develop a predictive model using Massachusetts 2020 crash data to classify crash severity based on features such as season, time of day, and road characteristics.
 
+### 2. Data Understanding
+
+The dataset contains 140 columns, meaning there are 139 potential features to use in models to predict our response variable of crash severity.  Crash severity has 5 different classes: Fatal Injury, Non-fatal Injury, Not Reported, Property Damage, and Unkown.
+
 ```{r}
 crash2020 %>%
 ggplot() +
   geom_point(aes(x=X, y=Y, color=CRASH_SEVERITY_DESCR))
 ```
 <img src="images/crashes1.png?raw=true"/>
-
-### 2. Data Understanding
-
-The dataset contains 140 columns, meaning there are 139 potential features to use in models to predict our response variable of crash severity.  Crash severity has 5 different classes: Fatal Injury, Non-fatal Injury, Not Reported, Property Damage, and Unkown.
-
 
 ### 3. Support the selection of appropriate statistical tools and techniques
 
