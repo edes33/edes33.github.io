@@ -22,11 +22,11 @@ Because there are so many features, we should use business and understanding and
 
 ### 3. Data Preparation
 
-After eliminating some features based on business understanding, we look to eliminate features containing a significant amount of nulls. Now we have arrived at a greatly reduced set of features.
+Eliminate features based on business understanding as well as those missing a significant amount of data as they will not be useful in our models.
 Next we need to change observations from vehicles to crashes.  There is already a feature for the number of vehicles involved, but we will need to investigate features containing vehicle specific data such as driver's age and total occupants in car.  Driver's age and number of occupants are relevant data worth exploring with our models, so we do not want to lose them.  Instead, we will use summary metrics such as min, max, mean, median, or mode to perserve this data at the crash level.
+Once the dataset is reduced to crashes as observations, we continue our feature engineering by looking at 
 
-
-### 4. Provide a basis for further data collection through surveys or experiments
+### 4. Data Modeling
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
