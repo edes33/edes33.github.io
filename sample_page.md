@@ -22,9 +22,9 @@ Because there are so many features, we should use business and understanding and
 
 ### 3. Data Preparation
 
-Eliminate features based on business understanding as well as those missing a significant amount of data as they will not be useful in our models.
-Next we need to change observations from vehicles to crashes.  There is already a feature for the number of vehicles involved, but we will need to investigate features containing vehicle specific data such as driver's age and total occupants in car.  Driver's age and number of occupants are relevant data worth exploring with our models, so we do not want to lose them.  Instead, we will use summary metrics such as min, max, mean, median, or mode to perserve this data at the crash level.
-Once the dataset is reduced to crashes as observations, we continue our feature engineering by looking at 
+Eliminate features based on business understanding as well as those missing a significant amount of data as they will not be useful in our models. Next we need to change observations from vehicles to crashes.  There is already a feature for the number of vehicles involved, but we will need to investigate features containing vehicle specific data such as driver's age and total occupants in car.  Driver's age and number of occupants are relevant data worth exploring with our models, so we do not want to lose them.  Instead, we will use summary metrics such as min, max, mean, median, or mode to perserve this data at the crash level.
+
+Once the dataset is reduced to relevant features and crashes as observations, we continue our data preparation by looking at unreasonable values, outliers, and any remaining missing values.  We also explore correlation between features to ensure we address any multicollinearity.
 
 ### 4. Data Modeling
 
