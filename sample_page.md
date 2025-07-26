@@ -1,18 +1,14 @@
 ## This can be your internal website page / project page
 
-**Project description:** This project explores car crash data from Massachusetts in 2020 with the goal of predicting crash severity. The dataset includes information on weather conditions, time of day, road type, and other contributing factors. After cleaning and preprocessing the data, multiple classification models were trained and evaluated, including logistic regression, Naive Bayes, kNN, and random forest. The random forest model showed the strongest performance, highlighting key predictors such as lighting conditions, weather, and roadway type. Results offer insights that could support traffic safety analysis and resource planning.  
+**Project description:** This project explores car crash data from Massachusetts in 2020 with the goal of predicting crash severity. The dataset includes information on weather conditions, time of day, road type, and other contributing factors. After cleaning and preprocessing the data, multiple classification models were trained and evaluated, including logistic regression, Naive Bayes, kNN, and random forest. Results offer insights that could support traffic safety analysis and resource planning.  
 
-### 1. Suggest hypotheses about the causes of observed phenomena
+### 1. Identify the problem
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
-### 2. Assess assumptions on which statistical inference will be based
+### 2. Data Understanding
 
 ```javascript
 if (isAwesome){
