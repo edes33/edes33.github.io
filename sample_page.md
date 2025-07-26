@@ -17,7 +17,10 @@ ggplot() +
 ```
 <img src="images/crashes1.png?raw=true"/>
 
-### 3. Support the selection of appropriate statistical tools and techniques
+It is clear from this map that there is significant class imbalance.  Most crashes result in only property damage.  We will need to find an appropriate way of handling this later.
+Because there are so many features, we should use business and understanding and some quick investigation of the features to identify what features to explore with our predictive models.  Keeping too many features would likely result in overfitting of the models to the training data.
+
+### 3. Data Preparation
 
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
