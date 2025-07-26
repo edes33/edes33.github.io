@@ -8,7 +8,7 @@ Motor vehicle crashes can result in outcomes ranging from minor property damage 
 
 ### 2. Data Understanding
 
-The dataset contains 140 columns, meaning there are 139 potential features to use in models to predict our response variable of crash severity.  Crash severity has 5 different classes: Fatal Injury, Non-fatal Injury, Not Reported, Property Damage, and Unkown.
+The dataset contains 140 columns, meaning there are 139 potential features to use in models to predict our response variable of crash severity.  Crash severity has 5 different classes: Fatal Injury, Non-fatal Injury, Not Reported, Property Damage, and Unkown.  In the raw dataset, each observation represents a car involved in the crash.  For this analysis, we want each observation to be a crash so we will need to handle this in data preparation.
 
 ```{r}
 crash2020 %>%
@@ -22,7 +22,9 @@ Because there are so many features, we should use business and understanding and
 
 ### 3. Data Preparation
 
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+After eliminating some features based on business understanding, we look to eliminate features containing a significant amount of nulls. Now we have arrived at a greatly reduced set of features.
+Next we need to change observations from vehicles to crashes.  There is already a feature for the number of vehicles involved, but we will need to investigate features containing vehicle specific data such as driver's age and total occupants in car.  Driver's age and number of occupants are relevant data worth exploring with our models, so we do not want to lose them.  Instead, we will use summary metrics such as min, max, mean, median, or mode to perserve this data at the crash level.
+
 
 ### 4. Provide a basis for further data collection through surveys or experiments
 
