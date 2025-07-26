@@ -4,7 +4,7 @@
 
 ### 1. Identify the problem
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Motor vehicle crashes can result in outcomes ranging from minor property damage to severe injuries or fatalities. Predicting the severity of a crash based on environmental and situational factors can help inform public safety initiatives, emergency response planning, and infrastructure improvements. This project aims to develop a predictive model using Massachusetts 2020 crash data to classify crash severity based on features such as season, time of day, and road characteristics.
 
 <img src="images/crashes1.png?raw=true"/>
 
