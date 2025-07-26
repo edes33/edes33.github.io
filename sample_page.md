@@ -1,6 +1,6 @@
 ## This can be your internal website page / project page
 
-**Project description:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+**Project description:** This project explores car crash data from Massachusetts in 2020 with the goal of predicting crash severity. The dataset includes information on weather conditions, time of day, road type, and other contributing factors. After cleaning and preprocessing the data, multiple classification models were trained and evaluated, including logistic regression, Naive Bayes, kNN, and random forest. The random forest model showed the strongest performance, highlighting key predictors such as lighting conditions, weather, and roadway type. Results offer insights that could support traffic safety analysis and resource planning.  
 
 ### 1. Suggest hypotheses about the causes of observed phenomena
 
