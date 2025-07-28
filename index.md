@@ -2,7 +2,7 @@
 
 ---
 
-### Category Name 1 
+### Data Science Projects 
 
 [Predicting Car Crash Severity](/sample_page)
 <img src="images/crashes.png?raw=true"/>
@@ -17,10 +17,11 @@
 
 ---
 
-### Category Name 2
+### Ops Research & Other Projects
 
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
+- Proposal Analysis Excel Tool
+- E-7 Life Cycly Cost Estimate
+- 
 - [Project 3 Title](http://example.com/)
 - [Project 4 Title](http://example.com/)
 - [Project 5 Title](http://example.com/)
