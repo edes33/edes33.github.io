@@ -18,16 +18,53 @@ ggplot() +
 <img src="images/crashes1.png?raw=true"/>
 
 It is clear from this map that there is significant class imbalance.  Most crashes result in only property damage.  We will need to find an appropriate way of handling this later.
+
 Because there are so many features, we should use business and understanding and some quick investigation of the features to identify what features to explore with our predictive models.  Keeping too many features would likely result in overfitting of the models to the training data.
 
 ### 3. Data Preparation
 
-Eliminate features based on business understanding as well as those missing a significant amount of data as they will not be useful in our models. Next we need to change observations from vehicles to crashes.  There is already a feature for the number of vehicles involved, but we will need to investigate features containing vehicle specific data such as driver's age and total occupants in car.  Driver's age and number of occupants are relevant data worth exploring with our models, so we do not want to lose them.  Instead, we will use summary metrics such as min, max, mean, median, or mode to perserve this data at the crash level.
+First we eliminate features based on business understanding as well as those missing a significant amount of data as they will not be useful in our models.
 
-Once the dataset is reduced to relevant features and crashes as observations, we continue our data preparation by looking at unreasonable values, outliers, and any remaining missing values.  We also explore correlation between features to ensure we address any multicollinearity.
+Next we need to change observations from vehicles to crashes. There is already a feature for the number of vehicles involved so we don't need to create this feature, but we will need to investigate features containing vehicle specific data such as driver's age and total occupants in car.  After handling missing data and unreasonable values for these features, we will use summary metrics such as min, max, mean, median, or mode to perserve this data at the crash level.
+```{r}
+age_summary_data <- crash %>%
+  group_by(CRASH_NUMB) %>%
+  summarise(MIN_DRVR_AGE=min(DRIVER_AGE, na.rm=TRUE), MAX_DRVR_AGE=max(DRIVER_AGE, na.rm =TRUE), AVG_DRVR_AGE=round(mean(DRIVER_AGE, na.rm=TRUE),3))
+```
+Now we remove the vehicle specific features
+```{r}
+crashes <- crash %>%
+  dplyr::select(-DRIVER_AGE,-TOTAL_OCCPT_IN_VEHC)
+```
+And reduce the dataset to the crash level
+```{r}
+crashes <- distinct(crashes)
+```
+Finally, join the dataset with our new summary dataset we created
+```{r}
+crashes <- left_join(crashes,age_summary_data, by = "CRASH_NUMB")
+```
+Once the dataset is reduced to relevant features and crashes as observations, we continue our data preparation by looking at unreasonable values, outliers, and any remaining missing values.
+```{r}
+missing <- data.frame(missing_values=apply(crashes,2,function(x) sum(is.na(x))))
+missing %>%
+  filter(missing_values>0) %>%
+  arrange(desc(missing_values))
+```
+We also explore correlation between features to ensure we address any multicollinearity.
+
+Finally we must handle the class imbalance mentioned earlier.  From the above plot showing crash severity by X and Y coordinate, we can see there are 5 classes. However, two of these classes are "Not Reported" and "Unknown." Because this is our dependent variable, we will want to remove observations where the crash severity is listed as unknown or not reported.  This leaves us with 3 classes, but when we look at the number of observations by class, we can see that fatal injury only has 256 observations out of a total of over 87,000. Because this is not enough data points, we will combine fatal injury with non-fatal injury into one class "injury" and consider property damage to be "no injury." Thus we have reduced the problem to a binary classification problem.  We still have a significant class imbalance issue though, as the injury to non-injury split is roughly 25/75.  If  a model predicts all "no injury" then it will have ~75% accuracy which is not bad. To avoid this, we use undersampling, in which we reduce the number of observations of property damage randomly.
+```{r}
+inj_count <- sum(crash_data$CRASH_SEVERITY_DESCR==0)
+crash_balanced <- ovun.sample(CRASH_SEVERITY_DESCR ~ ., data = crash_data, method = "under", N = inj_count*2, seed = 1)$data
+table(crash_balanced$CRASH_SEVERITY_DESCR)
+```
 
 ### 4. Data Modeling
+#### a. Naive Bayes
+#### b. Random Forest
+#### c. Logistic Regression with Bagging
+#### d. k-Nearest Neighbors (kNN)
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
