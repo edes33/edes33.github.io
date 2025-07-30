@@ -55,7 +55,7 @@ We also explore correlation between features to ensure we address any multicolli
 
 <img src="images/crash_pairspanel.png?raw=true"/>
 
-For some of our models we will also need to look closer at the distribution of each feature.
+There is some correlation between speed limit and number of lanes, which makes sense because highways are often more lanes and higher speed.  However, the correlation is not so strong that we need to worry about removing one of these features.  For some of our models we will also need to look closer at the distribution of each feature.
 
 Finally we must handle the class imbalance mentioned earlier.  From the earlier plot showing crash severity by X and Y coordinate, we can see there are 5 classes. However, two of these classes are "Not Reported" and "Unknown." Because this is our dependent variable, we will want to remove observations where the crash severity is listed as unknown or not reported.  This leaves us with 3 classes, but when we look at the number of observations by class, we can see that fatal injury only has 256 observations out of a total of over 87,000. This is not enough data points so we will combine fatal injury with non-fatal injury into one class "injury" (class 0) and consider property damage to be "no injury" (class 1). Thus we have reduced the problem to a binary classification problem.  We still have a significant class imbalance issue though, as the injury to non-injury split is roughly 25/75.  If  a model predicts all "no injury" then it will have ~75% accuracy which is not bad. To avoid this, we use undersampling, in which we reduce the number of observations of property damage randomly.
 ```{r}
