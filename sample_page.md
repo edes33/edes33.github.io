@@ -72,7 +72,7 @@ Split the data into training and validation data (70/30 split).
 Train the Naive Bayes Model on the training data.
 Now use the trained model to make predictions of crash severity based on the validation data.
 Compare the actual crash severity class for each observation against the prediction by the NB model using a Cross table.
-
+<img src="images/nb_crosstable.png?raw=true"/>
 #### b. Random Forest
 #### c. Logistic Regression with Bagging
 #### d. k-Nearest Neighbors (kNN)
