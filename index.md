@@ -20,7 +20,7 @@
 ### Ops Research & Other Projects
 
 - E-7 Rapid Prototyping Proposal Analysis Excel Tool (*Due to the nature of this work, I cannot attach files or include specifics*)
-  - Utilized **pivot tables** and **LOOKUP** formulas to create summary tables from extremely complex proposal pricing sheet.
+  - Utilized **pivot tables**, **LOOKUPS**, **SUMIFS**, etc. to create summary tables and charts from extremely complex proposal pricing sheet.
   - Created metrics for tracking proposal evaluation status to inform leadership on progress towards entering negotiations.
 - E-7 Life Cycle Cost Estimate (*Due to the nature of this work, I cannot attach files or include specifics*)
   - Conducted research on analogous systems, performed various **data collection** tasks, compiled messy data spanning 20 years into a clean and consolidated Excel workbook.
