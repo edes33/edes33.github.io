@@ -63,9 +63,16 @@ inj_count <- sum(crash_data$CRASH_SEVERITY_DESCR==0)
 crash_balanced <- ovun.sample(CRASH_SEVERITY_DESCR ~ ., data = crash_data, method = "under", N = inj_count*2, seed = 1)$data
 table(crash_balanced$CRASH_SEVERITY_DESCR)
 ```
-
+Before we start modeling, set aside 10% of data to be used as test data.  The rest of the data will be used for training and validation.
 ### 4. Data Modeling
 #### a. Naive Bayes
+
+Start by selecting categorical features.  (We could bin numerical features but we are going to hold off on that for now.)
+Split the data into training and validation data (70/30 split).
+Train the Naive Bayes Model on the training data.
+Now use the trained model to make predictions of crash severity based on the validation data.
+Compare the actual crash severity class for each observation against the prediction by the NB model using a Cross table.
+
 #### b. Random Forest
 #### c. Logistic Regression with Bagging
 #### d. k-Nearest Neighbors (kNN)
