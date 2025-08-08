@@ -5,7 +5,7 @@
 ### Data Science Projects 
 
 [Predicting Car Crash Severity](/sample_page)
-<img src="images/crashes.png?raw=true"/>
+<img src="images/crash_ov.png?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
