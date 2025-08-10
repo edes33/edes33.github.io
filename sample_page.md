@@ -67,27 +67,27 @@ Before we start modeling, set aside 10% of data to be used as test data.  The re
 ### 4. Data Modeling
 #### a. Naive Bayes
 
-Start by selecting categorical features.  (We could bin numeric features but we are going to hold off on that for now.)
+- Start by selecting categorical features.  (We could bin numeric features but we are going to hold off on that for now.)
 
-Split the data into training and validation data (70/30 split).
+- Split the data into training and validation data (70/30 split).
 
-Train the Naive Bayes Model on the training data.
+- Train the Naive Bayes Model on the training data.
 
-Now use the trained model to make predictions of crash severity based on the validation data.
+- Now use the trained model to make predictions of crash severity based on the validation data.
 
-Compare the actual crash severity class for each observation against the prediction by the NB model using a Cross table.
+- Compare the actual crash severity class for each observation against the prediction by the NB model using a Cross table.
 
 <img src="images/NB_crosstable.png?raw=true"/>
 
-Store performance metrics (accuracy, sensitivity, specificity, false negative rate) for model comparison later on.
+- Store performance metrics (accuracy, sensitivity, specificity, false negative rate) for model comparison later on.
 
 #### b. Random Forest
 
-Select both categorical and numeric data.
+- Select both categorical and numeric data.
 
-Similarly to the NB model, we will split the data into training and validation data, train the model using the training data, and compare predictions to actual class of the validation data in order to assess model performance.
+- Similarly to the NB model, we will split the data into training and validation data, train the model using the training data, and compare predictions to actual class of the validation data in order to assess model performance.
 
-Let's take a closer look at how many trees and how many variables were randomly selected for each tree in our model.
+- Let's take a closer look at how many trees and how many variables were randomly selected for each tree in our model.
 
 #### c. Logistic Regression with Bagging
 #### d. k-Nearest Neighbors (kNN)
