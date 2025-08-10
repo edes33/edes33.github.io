@@ -87,7 +87,11 @@ Before we start modeling, set aside 10% of data to be used as test data.  The re
 
 - Similarly to the NB model, we will split the data into training and validation data, train the model using the training data, and compare predictions to actual class of the validation data in order to assess model performance.
 
-- Let's take a closer look at how many trees and how many variables were randomly selected for each tree in our model.
+- Let's take a look at the variable importance in our Random Forest model
+
+<img src="images/crash_rfvariables.png?raw=true"/>
+
+- By calling the *ntree* and *mtry* object from our stored model, we can see how many trees and how many variables our Random Forest uses.  The RF model consists of 500 trees and uses only 4 variables.
 
 #### c. Logistic Regression with Bagging
 #### d. k-Nearest Neighbors (kNN)
