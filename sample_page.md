@@ -22,7 +22,7 @@ It is clear from this map that there is significant class imbalance.  Most crash
 Because there are so many features, we should use business and understanding and some quick investigation of the features to identify what features to explore with our predictive models.  Keeping too many features would likely result in overfitting of the models to the training data.
 
 ### 3. Data Preparation
-
+#### Model Agnostic Data Prep
 First we eliminate features based on business understanding as well as those missing a significant amount of data as they will not be useful in our models.
 
 Next we need to change observations from vehicles to crashes. There is already a feature for the number of vehicles involved so we don't need to create this feature, but we will need to investigate features containing vehicle specific data such as driver's age and total occupants in car.  After handling missing data and unreasonable values for these features, we will use summary metrics such as min, max, mean, median, or mode to perserve this data at the crash level.
@@ -44,14 +44,14 @@ Finally, join the dataset with our new summary dataset we created
 ```{r}
 crashes <- left_join(crashes,age_summary_data, by = "CRASH_NUMB")
 ```
-Once the dataset is reduced to relevant features and crashes as observations, we continue our data preparation by looking at unreasonable values, outliers, and any remaining missing values.
+Once the dataset is reduced to relevant features and crashes as observations, we continue our data preparation by looking at unreasonable values (data entry errors) and any remaining missing values.
 ```{r}
 missing <- data.frame(missing_values=apply(crashes,2,function(x) sum(is.na(x))))
 missing %>%
   filter(missing_values>0) %>%
   arrange(desc(missing_values))
 ```
-We also explore correlation between features to ensure we address any multicollinearity.
+To prepare for Logistic Regression and k-Nearest Neighbors, we must examine correlation between features to ensure we eliminate any multicollinearity.
 
 <img src="images/crash_pairspanel.png?raw=true"/>
 
@@ -92,7 +92,7 @@ Before we start modeling, set aside 10% of data to be used as test data.  The re
 #### c. Logistic Regression with Bagging
 
 - This model will only use numeric data so we start by selecting only those features.
-- 
+- Next we remove outliers (observations with values that are more than 3 standard deviations from the mean for any feature)
 - 
 
 
