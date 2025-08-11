@@ -68,13 +68,9 @@ Before we start modeling, set aside 10% of data to be used as test data.  The re
 #### a. Naive Bayes
 
 - Start by selecting categorical features.  (We could bin numeric features but we are going to hold off on that for now.)
-
 - Split the data into training and validation data (70/30 split).
-
 - Train the Naive Bayes Model on the training data.
-
 - Now use the trained model to make predictions of crash severity based on the validation data.
-
 - Compare the actual crash severity class for each observation against the prediction by the NB model using a Cross table.
 
 <img src="images/NB_crosstable.png?raw=true"/>
@@ -84,21 +80,20 @@ Before we start modeling, set aside 10% of data to be used as test data.  The re
 #### b. Random Forest
 
 - Select both categorical and numeric data.
-
 - Similarly to the NB model, we will split the data into training and validation data, train the model using the training data, and compare predictions to actual class of the validation data in order to assess model performance.
-
 - Let's take a look at the variable importance in our Random Forest model
 
 <img src="images/crash_rfvariables.png?raw=true"/>
 
 - By calling the *ntree* and *mtry* object from our stored model, we can see how many trees and how many variables (*m*) our Random Forest uses.  The RF model consists of 500 trees and it randomly selects 4 variables from the total 18 available (the default *m* is the square root of total variables).
-
 - We now experiment with different values of *m*, but after building models with *m=2* and *m=6* we find that the results are nearly identical to the default of *m=4* so we will stick with the default.
-
 - We store the evaluation metrics for this model and move on to building a different model.
 
 #### c. Logistic Regression with Bagging
 
+- This model will only use numeric data so we start by selecting only those features.
+- 
+- 
 
 
 #### d. k-Nearest Neighbors (kNN)
