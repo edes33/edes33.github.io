@@ -91,9 +91,16 @@ Before we start modeling, set aside 10% of data to be used as test data.  The re
 
 <img src="images/crash_rfvariables.png?raw=true"/>
 
-- By calling the *ntree* and *mtry* object from our stored model, we can see how many trees and how many variables our Random Forest uses.  The RF model consists of 500 trees and uses only 4 variables.
+- By calling the *ntree* and *mtry* object from our stored model, we can see how many trees and how many variables (*m*) our Random Forest uses.  The RF model consists of 500 trees and it randomly selects 4 variables from the total 18 available (the default *m* is the square root of total variables).
+
+- We now experiment with different values of *m*, but after building models with *m=2* and *m=6* we find that the results are nearly identical to the default of *m=4* so we will stick with the default.
+
+- We store the evaluation metrics for this model and move on to building a different model.
 
 #### c. Logistic Regression with Bagging
+
+
+
 #### d. k-Nearest Neighbors (kNN)
 
 
