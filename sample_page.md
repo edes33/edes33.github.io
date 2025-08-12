@@ -77,13 +77,12 @@ For **kNN** we use z-score standardization to normalize the features prior to mo
 
 - For each model, we split the preprocessed data into training and validation data (70/30 split).
 - We then train the model on the training data and use the resulting model to make predictions of the crash severity for the validation data.
-- Compare the actual crash severity class for each observation against the prediction using a Cross table.
-- Store performance metrics (accuracy, sensitivity, specificity, false negative rate) for model comparison later on.
+- Next, we compare the actual crash severity class for each observation against the prediction using a Cross table.
+- Finally, we store performance metrics (accuracy, sensitivity, specificity, false negative rate) for model comparison later on.
 
 #### a. Naive Bayes
 
 <img src="images/NB_crosstable.png?raw=true"/>
-
 
 #### b. Random Forest
 
