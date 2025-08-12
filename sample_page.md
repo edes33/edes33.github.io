@@ -108,4 +108,13 @@ For **kNN** we use z-score standardization to normalize the features prior to mo
 
 - There is not significant improvement in accuracy as we vary *k*, so we will stick with the *sqrt(n)* default choice for *k*.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 5. Evaluation
+
+Let's look at the model performance metrics we calculated:
+
+<img src="images/modelmetrics_summary.png?raw=true"/>
+
+Comparing the evaluation metrics across the models, we see that the Random Forest has the best preformance.  It has the lowest false negative rate, the highest accuracy and highest sensitivity.  Logistic regression had the highest specificity, but also the highest false negative rate.  This is not ideal because we are trying to predict crashes which result in injuries/death.  A false negative is a more costly prediction than a false positive.
+
+Next steps for this project would be to include more years of data.  With more available data, we might be able to use some features that had to be discarded in this iteration of the project.  Also, a time-consuming, but worthwhile, addition would be to do some text mining on features such as weather conditions in order to keep that feature in a meaningful way.
+
