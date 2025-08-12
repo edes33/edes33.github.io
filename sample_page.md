@@ -93,14 +93,14 @@ For **kNN** we use z-score standardization to normalize the features prior to mo
 - By calling the *ntree* and *mtry* object from our stored model, we can see how many trees and how many variables (*m*) our Random Forest uses.  The RF model consists of 500 trees and it randomly selects 4 variables from the total 18 available (the default *m* is the square root of total variables).
 - We now experiment with different values of *m*, but after building models with *m=2* and *m=6* we find that the results are nearly identical to the default of *m=4* so we will stick with the default.
 
-
+<img src="images/RF_crosstable.png?raw=true"/>
 
 #### c. Logistic Regression with Bagging
 
 - 
-
+<img src="images/logreg_crosstable.png?raw=true"/>
 
 #### d. k-Nearest Neighbors (kNN)
 
-
+- We start by setting *k=sqrt(n)* where n is the number of observations in our training data, but to tune our model we will take a look at values for k from 10 to 200.
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
