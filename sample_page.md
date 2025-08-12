@@ -103,4 +103,9 @@ For **kNN** we use z-score standardization to normalize the features prior to mo
 #### d. k-Nearest Neighbors (kNN)
 
 - We start by setting *k=sqrt(n)* where n is the number of observations in our training data, but to tune our model we will take a look at values for k from 10 to 200.
+
+<img src="images/tune_knn.png?raw=true"/>
+
+
+
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
