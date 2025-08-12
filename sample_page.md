@@ -106,6 +106,6 @@ For **kNN** we use z-score standardization to normalize the features prior to mo
 
 <img src="images/tune_knn.png?raw=true"/>
 
-
+- There is not significant improvement in accuracy as we vary *k*, so we will stick with the *sqrt(n)* default choice for *k*.
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
