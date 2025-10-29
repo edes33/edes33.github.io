@@ -7,7 +7,7 @@
 [Predicting Car Crash Severity](/sample_page)
 <img src="images/crashes_thumbnail.png?raw=true"/>
 
-[Amazon Data Exploration](/amazon_data)
+[Credit Card and Amazon Data Exploration](/amazon_data)
 
 ---
 
