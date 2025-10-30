@@ -10,7 +10,6 @@
 
 **Raw data** Although the data from Amazon was more granular because it has every item purchased, the purchases were not categorized making it difficult to summarize in a meaningful way.  The credit card data was the opposite.  Each observation was at the total transaction level, lacking insight into individual purchases, but each transaction was labeled using the following categories: *Shopping, Groceries, Food & Drink, Home, Bills & Utilities, Professional Services, Automotive, Personal, Health & Wellness, and Gas*
 
-
 ## Monthly Dashboard
 <img src="images/CCmonthly_dash.png?raw=true"/>
 
