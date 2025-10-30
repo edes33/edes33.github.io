@@ -8,7 +8,7 @@
 <img src="images/crashes_thumbnail.png?raw=true"/>
 
 [Credit Card and Amazon Data Exploration](/amazon_data)
-
+<img src="images/CCmonthly_dash.png?raw=true"/>
 ---
 
 ### Ops Research & Other Projects
