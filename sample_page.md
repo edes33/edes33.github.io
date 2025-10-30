@@ -1,4 +1,4 @@
-## Crash Severity Prediction Project
+# Crash Severity Prediction Project
 
 **Project description:** This project explores car crash data from Massachusetts in 2020 with the goal of predicting crash severity. The dataset includes information on weather conditions, time of day, road type, and other contributing factors. After cleaning and preprocessing the data, multiple classification models were trained and evaluated, including logistic regression, Naive Bayes, kNN, and random forest. Results offer insights that could support traffic safety analysis and resource planning.  
 
