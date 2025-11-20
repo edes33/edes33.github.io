@@ -7,7 +7,7 @@
 [Predicting Car Crash Severity (R)](/sample_page)
 <img src="images/crashes_thumbnail.png?raw=true"/>
 
-[Credit Card and Amazon Data Exploration (R & PowerBI)]
+Credit Card and Amazon Data Exploration (R & PowerBI)
 <img src="images/CCmonthly_dash.png?raw=true"/>
 ---
 
